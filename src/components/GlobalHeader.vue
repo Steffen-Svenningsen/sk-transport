@@ -85,7 +85,7 @@ header
 
     .desktop-nav
         display: flex
-        gap: 16px
+        gap: 32px
         align-items: center
 
         a
@@ -94,7 +94,7 @@ header
             padding: 4px 0
 
             &:last-of-type
-                padding-left: 15px
+                padding-left: 31px
                 border-left: 1px solid #25252525
                 border-bottom: none !important
                 font-weight: 700

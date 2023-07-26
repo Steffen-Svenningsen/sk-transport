@@ -38,7 +38,6 @@ section
     place-items: center
 
     h1
-        font-size: 48px
         color: $white
         font-weight: 700
         margin: 80px 0 28px 0
@@ -105,6 +104,7 @@ section
         border-radius: 50px !important
         justify-content: flex-start !important
         gap: 2rem !important
+        padding: 1rem !important
 
         a
             &:last-of-type

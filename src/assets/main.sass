@@ -8,10 +8,13 @@ $grey: #d9d9d9
 #app
     font-family: 'Inter', sans-serif
 
+    h1
+        font-size: clamp(32px, 3.25vw, 64px)
+
     main, .page
         margin-top: 100px
 
-    main, .page, section, footer
+    .page, section, footer
         padding: 64px
 
     header 
@@ -23,7 +26,7 @@ $grey: #d9d9d9
             height: auto
 
 @media (max-width: 950px)
-    main, .page, section, footer
+    .page, section, footer
         padding: 64px 16px !important
 
     header
