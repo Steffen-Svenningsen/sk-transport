@@ -136,6 +136,7 @@ header
             img
                 height: 24px !important
                 width: 24px !important
+                filter: invert(100%)
 
         a
             text-decoration: none

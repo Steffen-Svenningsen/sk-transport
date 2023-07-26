@@ -18,6 +18,7 @@
                 <a href="mailto:sktranp@hotmail.com">Email: sktransp@hotmail.com</a>
                 <p>CVR: 27761518</p>
             </div>
+            <div class="line line-mobile"></div>
             <div class="links">
                 <router-link :to="{ name: 'vognmand' }">Vognmand</router-link>
                 <router-link :to="{ name: 'entreprenuer' }">Entreprenør</router-link>
@@ -58,6 +59,9 @@ footer
                 color: $black
                 text-decoration: none
 
+        .line-mobile
+            display: none
+
         .links
             max-width: 440px
             justify-content: space-between
@@ -77,7 +81,12 @@ footer
 
         .info-container
             flex-direction: column-reverse
+            gap: 0
 
             .links
                 margin-left: 0 !important
+
+            .line-mobile
+                display: block !important
+            
 </style>

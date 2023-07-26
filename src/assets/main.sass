@@ -11,7 +11,10 @@ $grey: #d9d9d9
     main, .page
         margin-top: 100px
 
-    main, .page, section, header, footer
+    main, .page, section, footer
+        padding: 64px
+
+    header 
         padding: 32px 64px
 
     div
@@ -20,5 +23,8 @@ $grey: #d9d9d9
             height: auto
 
 @media (max-width: 950px)
-    main, .page, section, header, footer
+    main, .page, section, footer
+        padding: 64px 16px !important
+
+    header
         padding: 16px !important
