@@ -10,13 +10,13 @@ function scrollFunction() {
 
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
     if (header) {
-      header.style.borderBottom = '1px solid black';
-      header.style.padding = '0.75rem clamp(2.5%, 3rem, 5%)';
+      header.style.borderBottom = '1px solid #25252525';
+      header.style.padding = '16px 64px';
     }
   } else {
     if (header) {
       header.style.borderBottom = 'none';
-      header.style.padding = '1.5rem clamp(2.5%, 3rem, 5%)';
+      header.style.padding = '32px 64px';
     }
   }
 }
@@ -72,12 +72,10 @@ header
     top: 0
     left: 0
     width: 100%
-    padding: 24px 64px
     box-sizing: border-box
     background: $white
     z-index: 10
     transition: 0.2s
-    border-bottom: 1px solid #25252525
 
     .logo
         text-decoration: none
@@ -160,12 +158,9 @@ header
                 width: 65%
 
 @media (max-width: 950px)
-    header
-        padding: 16px
+    .hamburger
+        display: flex !important
 
-        .hamburger
-            display: flex !important
-
-        .desktop-nav
-            display: none !important
+    .desktop-nav
+        display: none !important
 </style>
