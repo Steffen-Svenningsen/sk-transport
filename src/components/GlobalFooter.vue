@@ -5,7 +5,7 @@
 <template>
     <footer>
         <div class="logo">
-            <img src="@/assets/images/sklogo.png" alt="SK Transport">
+            <img src="@/assets/images/sklogo.png" width="280" height="75" alt="SK Transport">
         </div>
         <div class="line"></div>
         <div class="info-container">
@@ -20,12 +20,15 @@
             </div>
             <div class="line line-mobile"></div>
             <div class="links">
-                <router-link :to="{ name: 'vognmand' }">Vognmand</router-link>
-                <router-link :to="{ name: 'entreprenuer' }">Entreprenør</router-link>
-                <router-link :to="{ name: 'sandoggrus' }">Sand & grus</router-link>
-                <router-link :to="{ name: 'container' }">Containerkørsel</router-link>
-                <router-link :to="{ name: 'maskinudlejning' }">Maskinudlejning</router-link>
-                <router-link :to="{ name: 'kontakt' }">Kontakt</router-link>
+                <h6>Genveje</h6>
+                <nav>
+                    <router-link :to="{ name: 'vognmand' }">Vognmand</router-link>
+                    <router-link :to="{ name: 'entreprenuer' }">Entreprenør</router-link>
+                    <router-link :to="{ name: 'sandoggrus' }">Sand & grus</router-link>
+                    <router-link :to="{ name: 'container' }">Containerkørsel</router-link>
+                    <router-link :to="{ name: 'maskinudlejning' }">Maskinudlejning</router-link>
+                    <router-link :to="{ name: 'kontakt' }">Kontakt</router-link>
+                </nav>
             </div>
         </div>
     </footer>
@@ -63,18 +66,46 @@ footer
             display: none
 
         .links
-            max-width: 440px
             justify-content: space-between
             display: flex
-            gap: 2rem
+            flex-direction: column
+            gap: 1rem
             flex-wrap: wrap
             margin-left: 10rem
 
-            a
-                font-size: 24px
-                font-weight: 600
-                color: $black
-                text-decoration: none
+            h6
+                font-size: 20px
+                font-weight: 500
+                position: relative
+                width: fit-content
+
+                &::after
+                    position: absolute
+                    content: ''
+                    width: 32px
+                    height: 3px
+                    background: $red
+                    bottom: -6px
+                    left: 0
+                    opacity: 0.65
+
+
+            nav
+                display: flex
+                flex-direction: column
+                gap: 16px
+                flex-wrap: wrap
+                max-height: 100px
+
+
+                a
+                    color: $black
+                    text-decoration: none
+                    opacity: 0.75
+                    transition: 0.2s
+
+                    &:hover
+                        opacity: 1
 
 @media (max-width: 950px)
     footer
