@@ -42,7 +42,7 @@ const toggleMobileMenu = () => {
         <button @click="toggleMobileMenu" class="hamburger">
             <img src="@/assets/icons/hamburger.png" alt="Menu">
         </button>
-        <nav v-if="mobileMenu" class="mobile-nav">
+        <nav @scroll.prevent @wheel.prevent @touchmove.prevent v-if="mobileMenu" class="mobile-nav">
             <button @click="toggleMobileMenu" class="close-btn">
                 <img src="@/assets/icons/x.png" alt="Close">
             </button>
@@ -92,15 +92,23 @@ header
             text-decoration: none
             color: $black
             padding: 4px 0
+            border-bottom: 2px solid transparent
+            opacity: 0.75
+            transition: 0.2s
+
+            &:hover
+                opacity: 1
 
             &:last-of-type
                 padding-left: 31px
                 border-left: 1px solid #25252525
                 border-bottom: none !important
                 font-weight: 700
+                opacity: 1
 
         .router-link-active
-            border-bottom: 1px solid $red
+            border-bottom: 2px solid $red
+            opacity: 1
 
     .hamburger
         display: none
