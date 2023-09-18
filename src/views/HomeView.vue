@@ -1,9 +1,29 @@
 <script setup>
 import ServiceBox from '../components/ServiceBox.vue';
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { Navigation } from 'swiper/modules'
+
+const changeSlide = () => {
+  return {
+    modules: [Navigation]
+  }
+}
 </script>
 
 <template>
   <main>
+    <section class="hero-section">
+      <swiper class="my-swiper" css-mode="true" :navigation="true" :modules="changeSlide().modules" space-between="32px" :slides-per-view="1">
+        <swiper-slide><img src="@/assets/images/brand-image.webp" width="1440" height="760" alt="Truck"></swiper-slide>
+        <swiper-slide>Slide 2</swiper-slide>
+        <swiper-slide>Slide 3</swiper-slide>
+        <swiper-slide>Slide 4</swiper-slide>
+        <swiper-slide>Slide 5</swiper-slide>
+        <swiper-slide>Slide 6</swiper-slide>
+      </swiper>
+    </section>
     <section class="service-section">
       <h1 class="title">Vi klarer alt!</h1>
       <p class="subtitle">Som entreprenør og vognmandsfirma kan vi hos SK Transport klare en bred vifte af opgaver.</p>
@@ -65,6 +85,20 @@ import ServiceBox from '../components/ServiceBox.vue';
 
 <style lang="sass" scoped>
 @import @/assets/main.sass
+
+.hero-section
+  padding-top: 16px !important
+
+  .my-swiper
+    height: auto
+    max-width: 1440px
+    margin: 0 auto
+
+    .swiper-slide
+      width: 100%
+      height: auto
+      display: grid
+      place-items: center
 
 .service-section
   position: relative

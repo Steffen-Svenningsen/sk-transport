@@ -25,6 +25,42 @@ $grey: #d9d9d9
             width: 100%
             height: auto
 
+.swiper-button-prev,
+.swiper-button-next
+    background: $red
+    padding: 16px
+    color: $white !important
+
+    &::after
+        font-size: 28px !important
+
+.swiper-button-next
+    top: auto !important
+    bottom: 32px !important
+    right: 32px !important
+
+.swiper-button-prev
+    top: auto !important
+    left: auto !important
+    bottom: 32px !important
+    right: 96px !important
+
+
+@media (max-width: 780px)
+    .swiper-button-next,
+    .swiper-button-prev
+        bottom: 16px !important
+        padding: 4px 8px !important
+
+        &::after
+            font-size: 18px !important
+
+    .swiper-button-next
+        right: 16px !important
+
+    .swiper-button-prev
+        right: 64px !important
+
 @media (max-width: 950px)
     .page, section, footer
         padding: 64px 16px !important
